@@ -83,7 +83,7 @@ export default class ClassesController {
 
       await trx.commit();
 
-      return response.json({ success: "Class created" });
+      return response.status(201).json({ success: "Class created" });
     } catch (error) {
       await trx.rollback();
       return response
